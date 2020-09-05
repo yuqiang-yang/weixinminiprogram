@@ -1,0 +1,35 @@
+<!-- <view class="container">
+  <text style="font-size:medium;word-break:break-all">设备名称：{{name}}</text>
+  <text style="font-size:x-small;color:gray;word-break:break-all">设备ID：{{connectedDeviceId}}</text>
+  <text style="font-size:x-small;color:gray">状态：{{connected?"已连接":"已断开"}}</text>
+  <text style="font-size:medium;margin-top:10px">发送内容：</text>
+  <input class="input" value="{{inputText}}" bindinput="bindInput" maxlength="20"/>
+  <text style="font-size:medium;margin-top:10px">接收内容：</text>
+  <input class="input" disabled value="{{receiveText}}" maxlength="20"/>
+  <button type="primary" class="button" bindtap="Send">发送</button>
+</view> -->
+<!--logs.wxml-->
+
+<view class="relative">
+
+  <!-- 背景图片 -->
+  <image style="width: 100px; height: 100px;" class="pic_background" src="../../yaogan_di.png"></image>
+
+
+  <!-- 摇杆图片 -->
+  <image style="width: 50px; height: 50px;left:{{leftLooks}}px;top:{{topLooks}}px;" bindtouchend='ImageReturn' bindtouchmove='ImageTouchMove' class="pic_tou" src="../../yaogan_tou.png " bindtap="ImageTouch"></image>
+
+
+  <button  type = "default" class = "circle1" bindtap="Send1">A</button>
+  <button  type = "default" class = "circle2" bindtap="Send2">B</button>
+  <button  type = "default" class = "circle3" bindtap="Send3">C</button>
+
+  <div class="box">
+    <text class="log-item">剩余电量：{{power}}%</text>
+    <text class="log-item">环境温度：{{temperature}}°C</text>
+    <text class="log-item">环境湿度：{{humility}}%</text>
+    <text class="log-item">障碍距离：{{distance}}cm</text>
+  </div>
+
+
+</view>
